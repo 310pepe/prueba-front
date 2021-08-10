@@ -10,6 +10,9 @@
         <img [src]="personaje.thumbnail.path | crearImg:personaje.thumbnail.extension  "class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ personaje.name }}</h5>
+          <button (click)="verPersonaje(personaje.id)" type="button" class="btn btn-outline-primary btn-block">
+            ver mas..
+          </button>
         </div>
       </div>
     </div>

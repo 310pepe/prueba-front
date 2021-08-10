@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MarvelService } from '../../services/marvel.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { MarvelService } from '../../services/marvel.service';
 export class BuscarComponent implements OnInit {
   personajesProv:any[]=[];
   personajes:any[]=[];
-  constructor(private marvelS:MarvelService) { }
+  constructor(private marvelS:MarvelService,
+              private router:Router) { }
 
   ngOnInit(): void {
     this.marvelS.getPersonajes().subscribe((data:any)=>
@@ -41,6 +43,11 @@ export class BuscarComponent implements OnInit {
       
       console.log(this.personajes);
     }
+
+    verPersonaje(id:number)
+   {
+     this.router.navigate(['/personaje',id]);
+   }
     
 
 }
