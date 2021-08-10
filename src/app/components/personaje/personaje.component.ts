@@ -9,6 +9,7 @@ import { MarvelService } from '../../services/marvel.service';
 })
 export class PersonajeComponent implements OnInit {
 
+  id:string='';
   load:boolean=false;
   info:any;
   personaje:any;
@@ -19,7 +20,7 @@ export class PersonajeComponent implements OnInit {
 
                 this.routerA.params.subscribe(params=>{
 
-                  
+                  this.id=params.id
                   this.getPer(params.id);
                   
                   
@@ -69,9 +70,9 @@ export class PersonajeComponent implements OnInit {
     
   }
 
-  verMas(url:String)
+  verMas(url:String,id:string)
   {
-    this.router.navigate(['/info',url])
+    this.router.navigate(['/info',url,id])
   }
 
 }
