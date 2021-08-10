@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CrearImgPipe } from './pipes/crear-img.pipe';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { PersonajeComponent } from './components/personaje/personaje.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BuscarComponent } from './components/buscar/buscar.component';
     NavbarComponent,
     HomeComponent,
     CrearImgPipe,
-    BuscarComponent
+    BuscarComponent,
+    PersonajeComponent
   ],
   imports: [
     BrowserModule,

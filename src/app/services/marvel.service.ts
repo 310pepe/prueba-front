@@ -8,7 +8,7 @@ import {map} from 'rxjs/operators';
 export class MarvelService {
 
   url='http://gateway.marvel.com/v1/public/characters?apikey=e10449344c3ed4d23dbc39c2bf657aa8&hash=ac9cd13f55ac10371645a0126b7f009c&ts=abcdefghijk';
-
+ 
   constructor( private http:HttpClient ) { }
 
   
@@ -18,9 +18,10 @@ export class MarvelService {
     return this.http.get(`${this.url}`).pipe(map((data:any)=>data.data.results));
   }
 
-  getPersonaje()
+  getPersonaje(id:string)
   {
-    
+    let url1=`http://gateway.marvel.com/v1/public/characters/${id}?apikey=e10449344c3ed4d23dbc39c2bf657aa8&hash=ac9cd13f55ac10371645a0126b7f009c&ts=abcdefghijk`
+    return this.http.get(`${url1}`).pipe(map((data:any)=>data.data.results[0]));;
   }
 
 }
