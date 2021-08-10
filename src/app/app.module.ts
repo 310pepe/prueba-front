@@ -10,6 +10,7 @@ import { CrearImgPipe } from './pipes/crear-img.pipe';
 import { BuscarComponent } from './components/buscar/buscar.component';
 import { PersonajeComponent } from './components/personaje/personaje.component';
 import { InfoComponent } from './components/info/info.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InfoComponent } from './components/info/info.component';
     CrearImgPipe,
     BuscarComponent,
     PersonajeComponent,
-    InfoComponent
+    InfoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
