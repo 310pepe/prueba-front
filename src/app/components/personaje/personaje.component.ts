@@ -44,8 +44,6 @@ export class PersonajeComponent implements OnInit {
       }
       
       this.load=true;
-      
-      console.log(this.personaje);
       this.mostrarInfo('co');
       
     });
@@ -61,11 +59,9 @@ export class PersonajeComponent implements OnInit {
     if(para==='co')
     {
       this.info=this.personaje.comics.items;
-      console.log(this.info);
     }else
     {
       this.info=this.personaje.series.items;
-      console.log(this.info);
     }
     
   }

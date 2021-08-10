@@ -14,17 +14,14 @@ export class HomeComponent  {
 
     this.marvelS.getPersonajes().subscribe((data:any)=>
     {
-      console.log(data);
-      this.personajes=data
-      console.log(this.personajes);
-
+      this.personajes=data;
     });
 
    }
 
    verPersonaje(id:number)
    {
-     this.router.navigate(['/personaje',id])
+     this.router.navigate(['/personaje',id]);
    }
   
 

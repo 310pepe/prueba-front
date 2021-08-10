@@ -40,9 +40,7 @@ export class InfoComponent implements OnInit {
         this.info=resp;
       }
       
-      this.load=true;
-      console.log(this.info);
-      
+      this.load=true;    
       
     });
   }
