@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CrearImgPipe } from './pipes/crear-img.pipe';
+import { BuscarComponent } from './components/buscar/buscar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CrearImgPipe
+    CrearImgPipe,
+    BuscarComponent
   ],
   imports: [
     BrowserModule,
