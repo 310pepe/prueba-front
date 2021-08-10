@@ -6,15 +6,19 @@ import { MarvelService } from '../../services/marvel.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent  {
+  personajes:any[]=[];
+  constructor( private marvelS:MarvelService ) {
 
-  constructor( private marvelS:MarvelService ) { }
+    this.marvelS.getPersonajes().subscribe((data:any)=>
+    {
+      console.log(data);
+      this.personajes=data
+      console.log(this.personajes);
 
-  
+    });
 
-  ngOnInit(): void {
-  }
-
+   }
   
 
 }

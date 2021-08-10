@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,12 @@ export class MarvelService {
 
   getPersonajes()
   {
-    return this.http.get(`${this.url}`);
+    return this.http.get(`${this.url}`).pipe(map((data:any)=>data.data.results));
+  }
+
+  getPersonaje()
+  {
+    
   }
 
 }
